@@ -17,3 +17,5 @@ pipeline {
                 nexusArtifactUploader artifacts: [[artifactId: 'java-samples', classifier: '', file: 'target/java-samples.war', type: 'pom']], credentialsId: 'nexus_user', groupId: 'com.github.chrishantha.sample', nexusUrl: '3.142.219.36:8081', nexusVersion: 'nexus2', protocol: 'http', repository: 'maven-releases', version: '0.0.2-SNAPSHOT'
             }
         }
+    }
+}
