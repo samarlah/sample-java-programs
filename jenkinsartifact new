@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Upload Artifact to Nexus') {
             steps {
-                nexusArtifactUploader artifacts: [[artifactId: 'java-samples', classifier: '', file: '/var/lib/jenkins/workspace/abcdefgh/memoryref/target/*.jar', type: 'pom']], credentialsId: 'nexus_user', groupId: 'com.github.chrishantha.sample', nexusUrl: 'ec2-52-14-139-126.us-east-2.compute.amazonaws.com:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-releases', version: '0.0.2-SNAPSHOT'
+                nexusArtifactUploader artifacts: [[artifactId: 'java-samples', classifier: '', file: 'target/java-samples.jar', type: '../pom.xml']], credentialsId: 'nexus_user', groupId: 'com.github.chrishantha.sample', nexusUrl: 'ec2-52-14-139-126.us-east-2.compute.amazonaws.com:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-releases', version: '0.0.2-SNAPSHOT'
             }
         }
     }
