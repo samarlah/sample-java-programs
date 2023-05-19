@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Clone Code') {
             steps {
-                git 'https://github.com/ramdevops03/Development-Team-Repo.git'
+                git 'https://github.com/samarlah/sample-java-programs.git'
             }
         }
         stage('Build Application Code') {
             steps {
-                sh 'mvn clean -f pom.xml'
+                sh 'mvn package -f pom.xml'
             }
         }      
     }
